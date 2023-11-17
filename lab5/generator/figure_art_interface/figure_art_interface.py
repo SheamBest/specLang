@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from generator.figures.figure import Figure
 from generator.figures.figures_3d.cube import Cube
 from generator.figures.figures_2d.square import Square
-from generator.colors.colors import text_file_saver
+from generator.colors.colors import textFileSaver
 
 
 class Command(ABC):
@@ -16,7 +16,7 @@ class Generate3DFigureCommand(Command):
         self.figure_interface = figure_interface
 
     def execute(self):
-        print(self.figure_interface.generate_3d_figure())
+        print(self.figure_interface.generate3dFigure())
 
 
 class SetSizeCommand(Command):
@@ -25,7 +25,7 @@ class SetSizeCommand(Command):
         self.new_size = new_size
 
     def execute(self):
-        self.figure_interface.set_size(self.new_size)
+        self.figure_interface.setSize(self.new_size)
 
 
 class SetColorCommand(Command):
@@ -34,11 +34,7 @@ class SetColorCommand(Command):
         self.new_color = new_color
 
     def execute(self):
-        self.figure_interface.set_color(self.new_color)
-
-
-# Add more command classes for SetType, SetPaddings, Generate2DFigure, SaveToFile3D, and SaveToFile2D
-
+        self.figure_interface.setColor(self.new_color)
 
 class FigureArtInterface(Figure):
     def __init__(self):
@@ -50,73 +46,72 @@ class FigureArtInterface(Figure):
         self.commands = {
             1: Generate3DFigureCommand(self),
             2: SetSizeCommand(self, 0),
-            3: SetColorCommand(self, ""),
-            # Add more command instances here
+            3: SetColorCommand(self, "")
         }
 
-    def set_type(self, type):
+    def setType(self, type):
         self.type = type
 
-    def set_paddings(self, left_padding, top_padding, bottom_padding):
+    def setPaddings(self, left_padding, top_padding, bottom_padding):
         self.left_padding = left_padding
         self.top_padding = top_padding
         self.bottom_padding = bottom_padding
 
-    def set_primary_data(self):
+    def setPrimaryData(self):
         size = int(input("figure size: "))
-        self.set_size(size)
+        self.setSize(size)
 
         color = input(
             "figure color(blue, green, red, magenta, yellow, white, cyan): ")
-        self.set_color(color)
+        self.setColor(color)
 
         type = input("figure type(skip for default): ")
         if len(type):
-            self.set_type(type)
+            self.setType(type)
 
-    def generate_with_left_padding(self, text):
+    def generateWithLeftPadding(self, text):
         lines = text.split('\n')
         padded_lines = [f"{' ' * self.left_padding}{line}" for line in lines]
         return '\n'.join(padded_lines)
 
-    def generate_with_top_padding(self, text):
+    def generateWithTopPadding(self, text):
         space = self.top_padding * '\n'
         padded_lines = space + text
         return padded_lines
 
-    def generate_with_bottom_padding(self, text):
+    def generateWithBottomPadding(self, text):
         space = self.bottom_padding * '\n'
         padded_lines = text + space
         return padded_lines
 
-    def generate_with_paddings(self, text):
-        return self.generate_with_bottom_padding(self.generate_with_top_padding(self.generate_with_left_padding(text)))
+    def generateWithPaddings(self, text):
+        return self.generateWithBottomPadding(self.generateWithTopPadding(self.generateWithLeftPadding(text)))
 
-    def generate_3d_figure(self):
+    def generate3dFigure(self):
         if self.type == 'cube':
             cube = Cube()
-            cube.set_size(self.size)
-            cube.set_color(self.color)
-            return self.generate_with_paddings(cube.generate_figure())
-        return super().generate_figure()
+            cube.setSize(self.size)
+            cube.setColor(self.color)
+            return self.generateWithPaddings(cube.generateFigure())
+        return super().generateFigure()
 
-    def generate_2d_figure(self):
+    def generate2dFigure(self):
         if self.type == 'cube':
             square = Square()
-            square.set_size(self.size)
-            square.set_color(self.color)
-            return self.generate_with_paddings(square.generate_figure())
-        return super().generate_figure()
+            square.setSize(self.size)
+            square.setColor(self.color)
+            return self.generateWithPaddings(square.generateFigure())
+        return super().generateFigure()
 
-    def save_to_file_2d(self):
+    def saveToFile2d(self):
         filename = input("enter filename before saving: ")
-        text_file_saver(
-            filename, self.generate_2d_figure())
+        textFileSaver(
+            filename, self.generate2dFigure())
 
-    def save_to_file_3d(self):
+    def saveToFile3d(self):
         filename = input("enter filename before saving: ")
-        text_file_saver(
-            filename, self.generate_3d_figure())
+        textFileSaver(
+            filename, self.generate3dFigure())
 
     @staticmethod
     def show_menu():
@@ -131,36 +126,36 @@ class FigureArtInterface(Figure):
         print("[ 8 ] - save to file(2d)")
         print("[ 0 ] - exit")
 
-    def loop_menu(self):
+    def loopMenu(self):
         while True:
             self.show_menu()
             menu_choice = int(input("menu key: "))
             if (menu_choice == 1):
-                print(self.generate_3d_figure())
+                print(self.generate3dFigure())
             elif (menu_choice == 2):
                 new_size = int(input("enter new size: "))
-                self.set_size(new_size)
+                self.setSize(new_size)
             elif (menu_choice == 3):
                 new_color = input("enter new color: ")
-                self.set_color(new_color)
+                self.setColor(new_color)
             elif (menu_choice == 4):
                 new_type = input("enter new type: ")
-                self.set_type(new_type)
+                self.setType(new_type)
             elif (menu_choice == 5):
                 left_padding = int(input("enter left padding: "))
                 top_padding = int(input("enter top padding: "))
                 bottom_padding = int(input("enter bottom padding: "))
-                self.set_paddings(left_padding, top_padding, bottom_padding)
+                self.setPaddings(left_padding, top_padding, bottom_padding)
             elif (menu_choice == 6):
-                print(self.generate_2d_figure())
+                print(self.generate2dFigure())
             elif (menu_choice == 7):
-                self.save_to_file_3d()
+                self.saveToFile3d()
             elif (menu_choice == 8):
-                self.save_to_file_2d()
+                self.saveToFile2d()
             else:
                 break
 
     def launch(self):
-        self.set_primary_data()
-        print(self.generate_3d_figure())
-        self.loop_menu()
+        self.setPrimaryData()
+        print(self.generate3dFigure())
+        self.loopMenu()

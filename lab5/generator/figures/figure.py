@@ -3,11 +3,11 @@ class Figure:
         self.size = 1
         self.color = 'green'
 
-    def set_size(self, size):
+    def setSize(self, size):
         self.size = size
 
-    def set_color(self, color):
+    def setColor(self, color):
         self.color = color
 
-    def generate_figure(self):
+    def generateFigure(self):
         return ""

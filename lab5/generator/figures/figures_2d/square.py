@@ -1,12 +1,12 @@
 from generator.figures.figure import Figure
-from generator.colors.colors import paint_text
+from generator.colors.colors import paintText
 
 
 class Square(Figure):
     def __init__(self):
         super().__init__()
 
-    def generate_square(self):
+    def generateSquare(self):
         n = self.size
         line = ''
         if n > 1:
@@ -29,7 +29,7 @@ class Square(Figure):
         square = top_line + '\n' + content + bottom_line
         return square
 
-    def generate_figure(self):
-        generated = self.generate_square()
-        colored = paint_text(generated, self.color)
+    def generateFigure(self):
+        generated = self.generateSquare()
+        colored = paintText(generated, self.color)
         return colored

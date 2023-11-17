@@ -1,12 +1,12 @@
 from generator.figures.figure import Figure
-from generator.colors.colors import paint_text
+from generator.colors.colors import paintText
 
 
 class Cube(Figure):
     def __init__(self):
         super().__init__()
 
-    def generate_cube(self):
+    def generateCube(self):
         n = self.size
         line = ''
         if n > 1:
@@ -36,7 +36,7 @@ class Cube(Figure):
             '\n' + bottom_content + bottom_line + '\n'
         return cube
 
-    def generate_figure(self):
-        generated = self.generate_cube()
-        colored = paint_text(generated, self.color)
+    def generateFigure(self):
+        generated = self.generateCube()
+        colored = paintText(generated, self.color)
         return colored
