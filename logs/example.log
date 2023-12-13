@@ -1,0 +1,32 @@
+DEBUG:matplotlib:matplotlib data path: C:\Users\shelv\AppData\Local\Programs\Python\Python311\Lib\site-packages\matplotlib\mpl-data
+DEBUG:matplotlib:CONFIGDIR=C:\Users\shelv\.matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is win32
+DEBUG:matplotlib:CACHEDIR=C:\Users\shelv\.matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from C:\Users\shelv\.matplotlib\fontlist-v330.json
+INFO:root:Starting: ConsoleMenu initialized
+INFO:root:Starting: Runner initialized
+INFO:root:Starting: Menu displayed
+DEBUG:matplotlib:matplotlib data path: C:\Users\shelv\AppData\Local\Programs\Python\Python311\Lib\site-packages\matplotlib\mpl-data
+DEBUG:matplotlib:CONFIGDIR=C:\Users\shelv\.matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is win32
+DEBUG:matplotlib:CACHEDIR=C:\Users\shelv\.matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from C:\Users\shelv\.matplotlib\fontlist-v330.json
+INFO:root:Starting: ConsoleMenu initialized
+INFO:root:Starting: Runner initialized
+INFO:root:Starting: Menu displayed
+DEBUG:matplotlib:matplotlib data path: C:\Users\shelv\AppData\Local\Programs\Python\Python311\Lib\site-packages\matplotlib\mpl-data
+DEBUG:matplotlib:CONFIGDIR=C:\Users\shelv\.matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is win32
+DEBUG:matplotlib:CACHEDIR=C:\Users\shelv\.matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from C:\Users\shelv\.matplotlib\fontlist-v330.json
+INFO:root:Starting: ConsoleMenu initialized
+INFO:root:Starting: Runner initialized
+INFO:root:Starting: ConsoleMenu initialized
+INFO:root:Starting: Runner initialized
+INFO:root:Starting: Menu displayed
+INFO:root:Starting: ConsoleMenu initialized
+INFO:root:Starting: Runner initialized
+INFO:root:Starting: Menu displayed

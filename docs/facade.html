@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module facade</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">facade</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cshelv%5Cdesktop%5C%D0%BD%D0%B0%D0%B2%D1%87%D0%B0%D0%BD%D0%BD%D1%8F%20%28%D0%BE%D0%BC%D0%B3%29%5Cspeclang%5Cclasses%5Cfacade%5Cfacade.py">c:\users\shelv\desktop\навчання (омг)\speclang\classes\facade\facade.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="logging.html">logging</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="facade.html#LabRunnerFacade">LabRunnerFacade</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="LabRunnerFacade">class <strong>LabRunnerFacade</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">A&nbsp;facade&nbsp;class&nbsp;for&nbsp;running&nbsp;various&nbsp;laboratory&nbsp;applications.&nbsp;<br>
+&nbsp;<br>
+This&nbsp;class&nbsp;acts&nbsp;as&nbsp;a&nbsp;central&nbsp;point&nbsp;for&nbsp;executing&nbsp;different&nbsp;lab&nbsp;tasks,&nbsp;<br>
+encapsulating&nbsp;the&nbsp;complexity&nbsp;of&nbsp;individual&nbsp;lab&nbsp;module&nbsp;executions.&nbsp;<br>
+It&nbsp;imports&nbsp;and&nbsp;manages&nbsp;several&nbsp;lab&nbsp;modules,&nbsp;each&nbsp;representing&nbsp;a&nbsp;different<br>
+task&nbsp;such&nbsp;as&nbsp;calculators,&nbsp;ASCII&nbsp;art&nbsp;creators,&nbsp;and&nbsp;data&nbsp;analysis&nbsp;tools.<br>
+&nbsp;<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lab1&nbsp;(module):&nbsp;Module&nbsp;for&nbsp;running&nbsp;the&nbsp;basic&nbsp;calculator&nbsp;from&nbsp;lab1.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lab2&nbsp;(module):&nbsp;Module&nbsp;for&nbsp;running&nbsp;the&nbsp;OOP&nbsp;calculator&nbsp;from&nbsp;lab2.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lab3&nbsp;(module):&nbsp;Module&nbsp;for&nbsp;running&nbsp;the&nbsp;ASCII&nbsp;art&nbsp;generator&nbsp;from&nbsp;lab3.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lab4&nbsp;(module):&nbsp;Module&nbsp;for&nbsp;running&nbsp;the&nbsp;2D&nbsp;ASCII&nbsp;art&nbsp;generator&nbsp;from&nbsp;lab4.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lab5&nbsp;(module):&nbsp;Module&nbsp;for&nbsp;running&nbsp;the&nbsp;3D&nbsp;ASCII&nbsp;art&nbsp;generator&nbsp;from&nbsp;lab5.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lab6&nbsp;(module):&nbsp;Module&nbsp;for&nbsp;running&nbsp;the&nbsp;calculator&nbsp;from&nbsp;lab6.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lab6_unittests&nbsp;(module):&nbsp;Module&nbsp;for&nbsp;running&nbsp;unit&nbsp;tests&nbsp;for&nbsp;lab6&nbsp;calculator.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lab7&nbsp;(module):&nbsp;Module&nbsp;for&nbsp;running&nbsp;API&nbsp;requests&nbsp;from&nbsp;lab7.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lab7_unittests&nbsp;(module):&nbsp;Module&nbsp;for&nbsp;running&nbsp;unit&nbsp;tests&nbsp;for&nbsp;lab7&nbsp;API&nbsp;requests.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lab8&nbsp;(module):&nbsp;Module&nbsp;for&nbsp;running&nbsp;data&nbsp;analysis&nbsp;from&nbsp;lab8.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="LabRunnerFacade-__init__"><strong>__init__</strong></a>(self)</dt><dd><span class="code">Initializes&nbsp;the&nbsp;<a href="#LabRunnerFacade">LabRunnerFacade</a>&nbsp;instance.<br>
+&nbsp;<br>
+Sets&nbsp;up&nbsp;logging&nbsp;and&nbsp;imports&nbsp;necessary&nbsp;lab&nbsp;modules,&nbsp;storing&nbsp;their&nbsp;references<br>
+for&nbsp;later&nbsp;use.&nbsp;Each&nbsp;lab&nbsp;module&nbsp;is&nbsp;accessible&nbsp;as&nbsp;an&nbsp;attribute&nbsp;of&nbsp;the&nbsp;instance.</span></dd></dl>
+
+<dl><dt><a name="LabRunnerFacade-run_2d_ascii_art"><strong>run_2d_ascii_art</strong></a>(self)</dt><dd><span class="code">Executes&nbsp;the&nbsp;2D&nbsp;ASCII&nbsp;art&nbsp;generator&nbsp;from&nbsp;lab4.</span></dd></dl>
+
+<dl><dt><a name="LabRunnerFacade-run_3d_ascii_art"><strong>run_3d_ascii_art</strong></a>(self)</dt><dd><span class="code">Executes&nbsp;the&nbsp;3D&nbsp;ASCII&nbsp;art&nbsp;generator&nbsp;from&nbsp;lab5.</span></dd></dl>
+
+<dl><dt><a name="LabRunnerFacade-run_api_requests"><strong>run_api_requests</strong></a>(self)</dt><dd><span class="code">Executes&nbsp;the&nbsp;API&nbsp;requests&nbsp;application&nbsp;from&nbsp;lab7.</span></dd></dl>
+
+<dl><dt><a name="LabRunnerFacade-run_api_requests_tests"><strong>run_api_requests_tests</strong></a>(self)</dt><dd><span class="code">Executes&nbsp;the&nbsp;unit&nbsp;tests&nbsp;for&nbsp;the&nbsp;API&nbsp;requests&nbsp;application&nbsp;from&nbsp;lab7.</span></dd></dl>
+
+<dl><dt><a name="LabRunnerFacade-run_ascii_art"><strong>run_ascii_art</strong></a>(self)</dt><dd><span class="code">Executes&nbsp;the&nbsp;ASCII&nbsp;art&nbsp;generator&nbsp;from&nbsp;lab3.</span></dd></dl>
+
+<dl><dt><a name="LabRunnerFacade-run_calculator"><strong>run_calculator</strong></a>(self)</dt><dd><span class="code">Runs&nbsp;the&nbsp;basic&nbsp;calculator&nbsp;application&nbsp;from&nbsp;lab1.</span></dd></dl>
+
+<dl><dt><a name="LabRunnerFacade-run_calculator_lab6"><strong>run_calculator_lab6</strong></a>(self)</dt><dd><span class="code">Runs&nbsp;the&nbsp;advanced&nbsp;calculator&nbsp;application&nbsp;from&nbsp;lab6.</span></dd></dl>
+
+<dl><dt><a name="LabRunnerFacade-run_calculator_tests"><strong>run_calculator_tests</strong></a>(self)</dt><dd><span class="code">Executes&nbsp;the&nbsp;unit&nbsp;tests&nbsp;for&nbsp;the&nbsp;calculator&nbsp;application&nbsp;from&nbsp;lab6.</span></dd></dl>
+
+<dl><dt><a name="LabRunnerFacade-run_data_analysis"><strong>run_data_analysis</strong></a>(self)</dt><dd><span class="code">Runs&nbsp;the&nbsp;data&nbsp;analysis&nbsp;application&nbsp;from&nbsp;lab8.</span></dd></dl>
+
+<dl><dt><a name="LabRunnerFacade-run_oop_calculator"><strong>run_oop_calculator</strong></a>(self)</dt><dd><span class="code">Runs&nbsp;the&nbsp;Object-Oriented&nbsp;Programming&nbsp;(OOP)&nbsp;calculator&nbsp;from&nbsp;lab2.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
